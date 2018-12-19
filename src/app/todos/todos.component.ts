@@ -9,6 +9,13 @@ import { Observable } from 'rxjs';
   styleUrls: ['./todos.component.css']
 })
 export class TodosComponent implements OnInit {
+ todos = [
+   {'id' : '1'},
+   {'id' : '10'},
+   {'id' : '100'},
+   {'id' : '1000'},
+  ];
+
   constructor(protected MyStream: TodosService) { }
 
    ngOnInit() {
@@ -21,6 +28,7 @@ export class TodosComponent implements OnInit {
       () => { console.log('Es ist fertig'); }
     );
    }
+
 
 }
 
